@@ -5,9 +5,9 @@ def main():
     # Register a new user
     registration = Register(
         registrationId=1,
-        email="student@example.com",
+        email="newUsert@example.com",
         phoneNumber=5551234567,
-        userName="student1",
+        userName="newUser1",
         password="Password123"
     )
 
@@ -32,7 +32,7 @@ def main():
     # Create a login information object
     login = LoginInformation(
         loginId=7001,
-        userName="student1",
+        userName="newUser1",
         password="Password123",
         accountNumber=1001
     )
@@ -42,7 +42,7 @@ def main():
     print("\n" + login.create())
 
     # Validate login
-    entered_user_name = "student1"
+    entered_user_name = "newUser1"
     entered_password = "Password123"
 
     if login.validate(entered_user_name, entered_password):
@@ -51,7 +51,7 @@ def main():
         print("Invalid username or password.")
 
     # Update login information
-    login.update(userName="student_updated")
+    login.update(userName="newUser1_updated")
 
     print(f"Updated username: {login.userName}")
 
